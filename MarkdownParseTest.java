@@ -33,11 +33,11 @@ public class MarkdownParseTest {
         Path filename = Path.of("test3.md");
         String contents = Files.readString(filename);
 
-        assertEquals(List.of(), MarkdownParse.getLinks(contents));
+        assertEquals(List.of("google.com"), MarkdownParse.getLinks(contents));
     }
     
     @Test
-    public void testMDParser() throws IOException{
+    public void testMDParsed() throws IOException{
         
         Path filename = Path.of("week5-test.md");
         String contents = Files.readString(filename);
